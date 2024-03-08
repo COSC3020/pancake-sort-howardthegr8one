@@ -30,3 +30,9 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons? What is it in terms of the number of flips? Add your
 answer to this markdown file.
 
+## Number of Comparisons
+The while loop in the pancake sort will run in linear time as it starts at the given array length and decrements once at the end of each iteration. The `getBiggest()` function runs in $n + 2n$ or asymptotically linear time. Since the `getBiggest()` function is called for every iteration of the while loop then the comparisons runtime is now at $\Theta(n^2)$ after ignoring lower terms and constants. Additionally the `flip()` function calls also run in linear time within the `while` loop. Therefore the runtime for the number of comparisons is $\Theta(n^2)$.
+
+## Number of Flips
+The number of flips is linear. `flip()` is called twice during each iteration of the `while` loop, and since the while loop runs in linear time then doing two calls to flip during each iteration results in $2n$ flips, which is a linear runtime. 
+
